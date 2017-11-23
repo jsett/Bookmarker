@@ -7,10 +7,10 @@ def index():
 
 @app.route('/create', methods = ['POST'])
 def create():
-    print request.method
-    if request.method == 'POST':
-        print request.form
-    return "ok"
+    #print "bookmark: " + request.form['bookmark']
+    #print "tag: " + request.form['btag']
+    #return str(request.form["bookmark"])
+    return redirect("/static/new.html")
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')
