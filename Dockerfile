@@ -1,9 +1,10 @@
 FROM ubuntu:latest
 MAINTAINER john s
+RUN mkdir -p /var/www/bookmarker
+WORKDIR /var/www/bookmarker
 RUN apt-get update -y
 RUN apt-get install -y python-pip python-dev build-essential
-COPY . /app
-WORKDIR /app
+COPY . /var/www/bookmarker
+WORKDIR /var/www/bookmarker
 RUN pip install -r requirements.txt
-ENTRYPOINT ["python"]
-CMD ["app.py"]
+ADD . /var/www/bookmarker

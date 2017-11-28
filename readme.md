@@ -15,8 +15,12 @@ grab the respo.
 ```
 git clone https://github.com/jsett/Bookmarker.git
 ```
-build and run it.
+build and run it just the docker.
 ```
 docker build -t bookmarker:latest .
 docker run -d -p 5000:5000 bookmarker
+```
+build and run the compose.
+```
+/usr/local/bin/docker-compose up
 ```
