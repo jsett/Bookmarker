@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM python:2
 MAINTAINER john s
 RUN mkdir -p /var/www/bookmarker
 WORKDIR /var/www/bookmarker
