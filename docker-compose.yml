@@ -10,6 +10,13 @@ services:
       - "5000:5000"
     volumes:
       - .:/var/www/bookmarker
+  worker:
+    build: .
+    command: python -m flask rq worker
+    environment:
+      - FLASK_APP=app.py
+    volumes:
+      - .:/var/www/bookmarker
   postgres:
     image: "postgres:alpine"
   redis:

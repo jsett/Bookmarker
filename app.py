@@ -20,9 +20,6 @@ def create():
 
 @app.route('/reddittest', methods = ['GET'])
 def reddittest():
-    #print "bookmark: " + request.form['bookmark']
-    #print "tag: " + request.form['btag']
-    #return str(request.form["bookmark"])
     j = q.enqueue(count_words_at_url, 'http://reddit.com')
     return str(j.id)
 
