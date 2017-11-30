@@ -1,7 +1,7 @@
 #Install
 First install git and docker on your server.
 ```
-sudo yum install git
+sudo yum install -y git
 sudo yum update -y
 sudo yum install -y docker
 sudo service docker start
@@ -22,7 +22,8 @@ docker run -d -p 5000:5000 bookmarker
 ```
 build and run the compose.
 ```
-/usr/local/bin/docker-compose up
+docker-compose build
+docker-compose up
 ```
 
 
