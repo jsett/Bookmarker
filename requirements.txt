@@ -4,3 +4,4 @@ Flask==0.12.2
 SQLAlchemy==1.1.15
 redis==2.10.6
 requests==2.18.4
+selenium==3.7.0

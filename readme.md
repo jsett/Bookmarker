@@ -24,3 +24,8 @@ build and run the compose.
 ```
 /usr/local/bin/docker-compose up
 ```
+
+
+#phantomjs
+wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+tar xvfj phantomjs-2.1.1-linux-x86_64.tar.bz2
