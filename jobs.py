@@ -6,7 +6,7 @@ def count_words_at_url(url):
     return len(resp.text.split())
 
 def getscreenshot(url):
-    driver = webdriver.PhantomJS(executable_path='/pathto/phantomjs')
+    driver = webdriver.PhantomJS(executable_path=r"/phantomjs/phantomjs/bin/phantomjs")
     driver.set_window_size(1024, 768) # optional
     driver.get('https://google.com/')
     driver.save_screenshot('screen.png') # save a screenshot to disk
