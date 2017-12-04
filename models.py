@@ -5,6 +5,7 @@ from sqlalchemy import create_engine
 import random
 import string
 
+Base = declarative_base()
 
 class Bookmarks(Base):
     __tablename__ = 'bookmarks'
