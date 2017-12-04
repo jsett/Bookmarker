@@ -1,7 +1,18 @@
+from models import Base, Bookmarks, Tag
 from flask import Flask, redirect, request
 from rq import Queue
 from redis import Redis
 from jobs import count_words_at_url
+
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship, sessionmaker
+from sqlalchemy import create_engine
+
+engine = create_engine('sqlite:///Bookmarks.db')
+Base.metadata.bind = engine
+DBSession = sessionmaker(bind=engine)
+session = DBSession()
+
 app = Flask(__name__)
 
 redis_conn = Redis()
