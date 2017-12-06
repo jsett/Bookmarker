@@ -33,6 +33,13 @@ def create():
     #print "bookmark: " + request.form['bookmark']
     #print "tag: " + request.form['btag']
     #return str(request.form["bookmark"])
+    b = Bookmarks(title=request.form['Title'], description=request.form['Description'], link=request.form['bookmark'])
+    session.add(b)
+    session.commit()
+    for x in request.form['btag'].split(","):
+        t = Tag(x, b.id)
+        session.add(t)
+    session.commit()
     return redirect("/static/new.html")
 
 @app.route('/reddittest', methods = ['GET'])
