@@ -13,6 +13,12 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
+#b = Bookmarks(title="hello world", description="best day ever", link="http://example.com")
+#session.add(b)
+#session.commit()
+
+#x = session.query(Bookmarks).filter_by(title="hello world").first()
+
 app = Flask(__name__)
 
 redis_conn = Redis()
